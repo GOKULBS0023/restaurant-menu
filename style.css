@@ -1,0 +1,130 @@
+*, 
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%; /*1rem = 10px*/
+}
+body{
+    background-color: #eee;
+    font-family: 'Roboto', sans-serif;
+    color: #102a42;
+    padding: 3rem;
+}
+li{
+    list-style: none;
+}
+a,
+a:active,
+a:link{
+    text-decoration: none;
+    color: inherit;
+}
+/* Header section */
+header{
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+.heading{
+    position: relative;
+    font-size: 3.6rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+.heading::after{
+    content: "";
+    width: 50%;
+    height: .4rem;
+    position: absolute;
+    background-color: #c59d5f;
+    top: 110%;
+    right: 50%;
+    transform: translateX(50%);
+}
+/* Menu Section */
+.menu{
+    width: 80vw;
+    margin: auto;
+}
+.menu-types{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+.btn{
+    position: relative;
+    font-size: 1.8rem;
+    padding: .5rem 1rem;
+    background-color: transparent;
+    color: #c59d5f;
+    border-radius: 5px;
+    border: 2.5px solid #c59d5f;
+    transition: all .3s;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #c59d5f;
+    color: #fff;
+    transform: scale(1.1);
+}
+.btn:active{
+    transform: scale(0.95);
+}
+.active{
+    background-color: #c59d5f;
+    color: #fff;
+    transform: scale(1.1);
+}
+/* Menu List  */
+.menu-list{
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-rows: max;
+    gap: 4.5rem;
+}
+.item{
+    height: 16rem;
+    display: grid;
+    grid-template-columns: 225px 3fr;
+    margin-top: 3rem;
+}
+.item img{
+    width: 100%;    
+    height: 16rem;
+    object-fit: cover;
+    border: 4px solid #c59d5f;
+    border-radius: 5px;
+}
+.item-info{
+    margin: 0 1rem 0 2rem;
+}
+.item-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    align-items: center;
+}
+.item-header h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .35rem;
+    text-transform: capitalize;
+}
+.item-header .price{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #c59d5f;
+}
+.item-text p{
+    margin-top: 1.2rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: .07rem;
+    color: #617d98;
+}
